@@ -1,0 +1,19 @@
+public class MainApp {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5}; // Исходный массив
+        int incrementValue = 3; // Значение для увеличения
+
+        increaseArrayElements(incrementValue, array); // Увеличиваем элементы массива
+
+        // Выводим измененный массив
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void increaseArrayElements(int increment, int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += increment; // Увеличиваем каждый элемент массива на указанное число
+        }
+    }
+}

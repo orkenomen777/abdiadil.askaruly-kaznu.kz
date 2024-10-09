@@ -1,0 +1,31 @@
+public class MainApp {
+    public static void main(String[] args) {
+        int[] array = {1, 3, 2, 5, 6, 10}; // Пример массива
+        compareArrayHalves(array); // Сравниваем половины массива
+    }
+
+    public static void compareArrayHalves(int[] arr) {
+        int mid = arr.length / 2;
+        int sumFirst = 0;
+        int sumSecond = 0;
+
+        // Суммируем первую половину
+        for (int i = 0; i < mid; i++) {
+            sumFirst += arr[i];
+        }
+
+        // Суммируем вторую половину
+        for (int i = mid; i < arr.length; i++) {
+            sumSecond += arr[i];
+        }
+
+        // Сравниваем суммы и выводим результат
+        if (sumFirst > sumSecond) {
+            System.out.println("Сумма первой половины больше: " + sumFirst);
+        } else if (sumSecond > sumFirst) {
+            System.out.println("Сумма второй половины больше: " + sumSecond);
+        } else {
+            System.out.println("Суммы половин равны: " + sumFirst);
+        }
+    }
+}

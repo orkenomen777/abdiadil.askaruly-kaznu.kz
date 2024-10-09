@@ -1,0 +1,15 @@
+public class MainApp {
+    public static void main(String[] args) {
+        int[] array = {4, 6, 3, 10, 5, 12, 2};
+        sumGreaterThanFive(array);
+    }
+    public static void sumGreaterThanFive(int[] arr) {
+        int total = 0;
+        for (int num : arr) {
+            if (num > 5) {
+                total += num;
+            }
+        }
+        System.out.println("Сумма элементов больше 5: " + total);
+    }
+}
